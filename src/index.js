@@ -2,7 +2,6 @@ export default {
 async fetch(request) {
 const url = new URL(request.url);
 
-```
 // WebSocket 请求直接转发
 if (request.headers.get('Upgrade') === 'websocket') {
   return fetch(request);
@@ -11,7 +10,6 @@ if (request.headers.get('Upgrade') === 'websocket') {
 return new Response(HTML, {
   headers: { 'Content-Type': 'text/html; charset=utf-8' }
 });
-```
 
 }
 }
